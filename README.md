@@ -49,3 +49,21 @@ GET /api/chooseImage?fileName=palmtunnel&height=50&width=50
 ### Build the project
 
 - npm run build
+
+# Run Locally
+
+### Clone the project
+
+- git clone https://github.com/DCS97/Image_Processing_Api
+
+### Go to the project directory
+
+- cd Image_Processing_Api
+
+### Install dependencies
+
+- npm i
+
+### Start the dev server
+
+- npm run start
