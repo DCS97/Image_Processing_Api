@@ -1,5 +1,5 @@
-import fs from "fs";
-import sharp from "sharp";
+import fs from 'fs';
+import sharp from 'sharp';
 
 interface imageResizerProps {
   originalFile: string;
@@ -13,8 +13,8 @@ const imageResizer = async ({
   outputFile,
   width,
   height,
-}: imageResizerProps) => {
-  fs.mkdir("Images/thumb", { recursive: true }, (err) => {
+}: imageResizerProps): Promise<void> => {
+  fs.mkdir('Images/thumb', { recursive: true }, (err) => {
     if (err) throw err;
   });
   await sharp(originalFile).resize(width, height).toFile(outputFile);

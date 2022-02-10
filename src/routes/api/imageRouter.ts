@@ -1,15 +1,15 @@
-import express, { Request, Response } from "express";
-import getResizedImage from "../../middleware/getResizedImage";
-import getImage from "../../middleware/getImage";
+import express, { Request, Response } from 'express';
+import getResizedImage from '../../middleware/getResizedImage';
+import getImage from '../../middleware/getImage';
 
 const imageRouter = express.Router();
 
 imageRouter.get(
-  "/",
+  '/',
   getImage,
   getResizedImage,
   (req: Request, res: Response): void => {
-    console.log("Processing image...");
+    console.log('Processing image...');
   }
 );
 
